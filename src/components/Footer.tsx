@@ -132,12 +132,12 @@ export function Footer() {
               © 2025 Sparsh Diet Clinic. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-stone-400 hover:text-sage-400 transition-colors" style={{ fontFamily: 'Raleway, sans-serif', fontOpticalSizing: 'auto', fontSize: '0.875rem' , color : '#d6d3d1'}}>
+              <Link to="/privacy-policy" className="text-stone-400 hover:text-sage-400 transition-colors" style={{ fontFamily: 'Raleway, sans-serif', fontOpticalSizing: 'auto', fontSize: '0.875rem' , color : '#d6d3d1'}}>
                 Privacy Policy
-              </a>
-              <a href="#" className="text-stone-400 hover:text-sage-400 transition-colors" style={{ fontFamily: 'Raleway, sans-serif', fontOpticalSizing: 'auto', fontSize: '0.875rem' , color : '#d6d3d1'}}>
+              </Link>
+              <Link to="/terms-of-service" className="text-stone-400 hover:text-sage-400 transition-colors" style={{ fontFamily: 'Raleway, sans-serif', fontOpticalSizing: 'auto', fontSize: '0.875rem' , color : '#d6d3d1'}}>
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>

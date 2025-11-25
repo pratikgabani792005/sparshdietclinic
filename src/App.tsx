@@ -11,6 +11,8 @@ import { CholesterolThyroid } from './pages/services/CholesterolThyroid';
 import { KidneyLiver } from './pages/services/KidneyLiver';
 import { BalancedDiet } from './pages/services/BalancedDiet';
 import { Therapeutic } from './pages/services/Therapeutic';
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
+import { TermsOfService } from './pages/TermsOfService';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -48,6 +50,8 @@ export default function App() {
           <Route path="/service/kidney-liver" element={<KidneyLiver />} />
           <Route path="/service/balanced-diet" element={<BalancedDiet />} />
           <Route path="/service/therapeutic" element={<Therapeutic />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
         </Routes>
         <Footer />
       </div>
