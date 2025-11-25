@@ -45,14 +45,14 @@ export function ContactSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="flex justify-center">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-8"
+            className="space-y-8 max-w-2xl w-full"
           >
             <div>
               <h3 className="mb-6" style={{ fontFamily: 'Stack Sans Notch', fontOpticalSizing: 'auto' }}>Let's Connect</h3>
@@ -63,7 +63,8 @@ export function ContactSection() {
 
             {/* Contact Details */}
             <div className="space-y-6">
-              <motion.div
+              <motion.a
+                href="tel:+917359552692"
                 whileHover={{ x: 5 }}
                 className="flex items-start space-x-4"
               >
@@ -75,9 +76,10 @@ export function ContactSection() {
                   <p className="text-stone-600">+91 73595 52692</p>
                   <p className="text-stone-500 mt-1" style={{ fontSize: '0.875rem' }}>Mon - Fri, 9:00 AM - 6:00 PM</p>
                 </div>
-              </motion.div>
+              </motion.a>
 
-              <motion.div
+              <motion.a
+                href="mailto:sparshdietclinic20@gmail.com"
                 whileHover={{ x: 5 }}
                 className="flex items-start space-x-4"
               >
@@ -89,9 +91,12 @@ export function ContactSection() {
                   <p className="text-stone-600">sparshdietclinic20@gmail.com</p>
                   <p className="text-stone-500 mt-1" style={{ fontSize: '0.875rem' }}>Response within 24 hours</p>
                 </div>
-              </motion.div>
+              </motion.a>
 
-              <motion.div
+              <motion.a
+                href="https://maps.app.goo.gl/H3a5UsJc6G6WRtmMA"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ x: 5 }}
                 className="flex items-start space-x-4"
               >
@@ -103,7 +108,7 @@ export function ContactSection() {
                   <p className="text-stone-600">218, 2nd floor Avadh pride, opposite metro pillar no 140</p>
                   <p className="text-stone-600">Near Nirant cross road, Vastral, Ahmedabad</p>
                 </div>
-              </motion.div>
+              </motion.a>
             </div>
 
             {/* Office Hours */}
@@ -126,7 +131,7 @@ export function ContactSection() {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Contact Form
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -232,7 +237,7 @@ export function ContactSection() {
                 </p>
               </motion.div>
             )}
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </section>

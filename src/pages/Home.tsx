@@ -87,7 +87,7 @@ export function Home() {
                 className="inline-flex items-center space-x-2 bg-sage-100/80 backdrop-blur-sm px-4 py-2 rounded-full mb-6"
               >
                 <Sparkles className="w-4 h-4 text-sage-700" />
-                <span className="text-sage-800" style={{ fontSize: '0.875rem', fontWeight: 600, letterSpacing: '0.05em' }}>
+                <span className="text-sage-800" style={{ fontSize: '0.875rem', fontWeight: 600, letterSpacing: '0.05em'  }}>
                   EVIDENCE-BASED NUTRITION
                 </span>
               </motion.div>
@@ -183,7 +183,7 @@ export function Home() {
                 <ImageWithFallback
                   src="/assets/IMG_20251119_132222@3x.jpg"
                   alt="Sparsh Diet Clinic - Expert Dietitian"
-                  className="w-full h-[600px] object-cover"
+                  className="w-full h-[350px] lg:h-[600px] object-cover"
                 />
               </div>
               {/* Floating Badge */}
@@ -251,7 +251,7 @@ export function Home() {
                 <ImageWithFallback
                   src="https://images.unsplash.com/photo-1691935152546-3a9e05f4010b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bHRyYXNvdW5kJTIwbWVkaWNhbCUyMGRldmljZXxlbnwxfHx8fDE3NjMzODUyNzZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
                   alt="Ultrasound Cavitation Technology"
-                  className="w-full h-[500px] object-cover"
+                  className="w-full h-[350px] lg:h-[500px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent" />
               </div>

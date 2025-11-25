@@ -254,8 +254,11 @@ export function ServiceDetailLayout({
           <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-6">
             <Clock className="w-8 h-8 text-white" />
           </div>
-          <h2 className="text-white mb-4">Ready to Get Started?</h2>
-          <p className="mb-8 opacity-90" style={{ fontSize: '1.125rem', lineHeight: 1.7 }}>
+          <h2 
+          className="text-white mb-4"
+          style={{color : '#f3f4f6'}}
+          >Ready to Get Started?</h2>
+          <p className="mb-8 opacity-90" style={{ fontSize: '1.125rem', lineHeight: 1.7 , color : '#f3f4f6' }}>
             Schedule your personalized consultation and take the first step towards achieving your health goals.
           </p>
           <motion.a

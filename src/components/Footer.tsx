@@ -96,7 +96,7 @@ export function Footer() {
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin size={18} className="text-sage-500 mt-1 flex-shrink-0" />
-                <a href="https://maps.google.com/?q=218,+2nd+floor+Avadh+pride,+opposite+metro+pillar+no+140+Near+Nirant+cross+road,+Vastral,+Ahmedabad" target="_blank" rel="noopener noreferrer" className="text-stone-300 hover:text-sage-400 transition-colors" style={{ fontFamily: 'Raleway, sans-serif', fontOpticalSizing: 'auto', fontSize: '0.9375rem' }}>
+                <a href="https://maps.app.goo.gl/H3a5UsJc6G6WRtmMA" target="_blank" rel="noopener noreferrer" className="text-stone-300 hover:text-sage-400 transition-colors" style={{ fontFamily: 'Raleway, sans-serif', fontOpticalSizing: 'auto', fontSize: '0.9375rem' }}>
                   218, 2nd floor Avadh pride, opposite metro pillar no 140<br />
                   Near Nirant cross road, Vastral, Ahmedabad
                 </a>

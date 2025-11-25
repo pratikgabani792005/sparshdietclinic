@@ -58,7 +58,7 @@ export function About() {
   return (
     <div className="min-h-screen pt-32 pb-24">
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-6 lg:px-8 mb-24">
+      <section className="max-w-7xl mx-auto px-6 lg:px-8 mb-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ export function About() {
         </motion.div>
 
         {/* Main Image Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -113,11 +113,11 @@ export function About() {
               />
             </div>
           </motion.div>
-        </div>
+        </div> */}
       </section>
 
       {/* Story Section */}
-      <section className="bg-gradient-to-br from-sage-50/50 to-peach-50/20 py-24 mb-24">
+      <section className="bg-gradient-to-br from-sage-50/50 to-peach-50/20 py-16 mb-24">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -125,11 +125,11 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center space-x-3 mb-8">
+            <div className="flex items-center justify-center space-x-3 mb-8">
               <div className="w-12 h-12 rounded-xl bg-sage-600 flex items-center justify-center">
                 <Heart className="w-6 h-6 text-white" />
               </div>
-              <h2>My Journey</h2>
+              <h2 className=''>My Journey</h2>
             </div>
 
             <div className="prose prose-lg max-w-none">
@@ -290,8 +290,8 @@ export function About() {
           <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-6">
             <Users className="w-8 h-8 text-white" />
           </div>
-          <h2 className="text-white mb-4" style={{ fontFamily: 'Stack Sans Notch', fontOpticalSizing: 'auto' , color : 'white'}}>Ready to Transform Your Health?</h2>
-          <p className="mb-8 text-white" style={{ fontSize: '1.125rem', lineHeight: 1.7 , color : 'white' }}>
+          <h2 className="text-white mb-4" style={{ fontFamily: 'Stack Sans Notch', fontOpticalSizing: 'auto' , color : '#f3f4f6'}}>Ready to Transform Your Health?</h2>
+          <p className="mb-8 text-white" style={{ fontSize: '1.125rem', lineHeight: 1.7 , color : '#f3f4f6' }}>
             Join thousands of clients who have achieved their wellness goals. Let's start your journey today.
           </p>
           <motion.a
