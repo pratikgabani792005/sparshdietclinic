@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { ServiceCard } from '../components/ServiceCard';
 import { BMICalculator } from '../components/BMICalculator';
@@ -13,11 +14,39 @@ import {
   Clipboard,
   Sparkles,
   CheckCircle2,
-  Award
+  Award,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 
 export function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const transformationImages = [
+    { src: '/assets/beforeafter1.jpg', alt: 'Client Transformation 1' },
+    { src: '/assets/beforeafter2.jpg', alt: 'Client Transformation 2' },
+    { src: '/assets/beforeafter3.jpg', alt: 'Client Transformation 3' },
+    { src: '/assets/beforeafter4.jpg', alt: 'Client Transformation 4' },
+    { src: '/assets/beforeafter5.jpg', alt: 'Client Transformation 5' },
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % transformationImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + transformationImages.length) % transformationImages.length);
+  };
+
+  // Auto-slide effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [currentSlide]);
   const services = [
     {
       title: 'Weight Loss',
@@ -310,8 +339,110 @@ export function Home() {
         </div>
       </section>
 
-      {/* BMI Calculator Section */}
+      {/* Before & After Section */}
       <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h6 className="text-sage-600 mb-3">TRANSFORMATION STORIES</h6>
+            <h2 className="mb-4" style={{ fontFamily: 'Stack Sans Notch', fontOpticalSizing: 'auto' }}>Real Results, Real People</h2>
+            <p className="text-stone-600 max-w-3xl mx-auto" style={{ fontSize: '1.0625rem', lineHeight: 1.75 }}>
+              See the incredible transformations our clients have achieved through personalized nutrition plans and dedicated guidance.
+            </p>
+          </motion.div>
+
+          {/* Slider Container */}
+          <div className="relative">
+            {/* Slider Track */}
+            <div className="overflow-hidden">
+              <motion.div
+                className="flex gap-6"
+                animate={{ x: `${-currentSlide * 100}%` }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
+              >
+                {[...transformationImages, ...transformationImages, ...transformationImages].map((image, index) => (
+                  <div
+                    key={index}
+                    className="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] flex-shrink-0"
+                  >
+                    <div className="relative rounded-3xl overflow-hidden shadow-xl">
+                      <ImageWithFallback
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-[500px] object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-900/40 to-transparent" />
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 rounded-full bg-white shadow-xl flex items-center justify-center text-stone-700 hover:bg-sage-50 hover:text-sage-700 transition-all duration-300 z-10"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 rounded-full bg-white shadow-xl flex items-center justify-center text-stone-700 hover:bg-sage-50 hover:text-sage-700 transition-all duration-300 z-10"
+              aria-label="Next slide"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+
+            {/* Dots Indicator */}
+            <div className="flex justify-center gap-2 mt-8">
+              {transformationImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    currentSlide === index
+                      ? 'bg-sage-600 w-8'
+                      : 'bg-stone-300 hover:bg-stone-400'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-center mt-12"
+          >
+            <p className="text-stone-600 mb-6" style={{ fontSize: '1.0625rem', lineHeight: 1.75 }}>
+              Ready to start your transformation journey?
+            </p>
+            <motion.a
+              whileHover={{ boxShadow: '0 0 20px rgba(152, 185, 141, 0.6)' }}
+              whileTap={{ scale: 0.98 }}
+              href="#contact"
+              className="inline-flex items-center px-8 py-4 text-white rounded-full transition-all duration-300 cursor-pointer"
+              style={{ fontSize: '1rem', fontWeight: 600, letterSpacing: '0.02em', backgroundColor: '#557155', boxShadow: '0 4px 12px rgba(0,0,0,0.15)' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#402211'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#557155'}
+            >
+              Book Your Consultation
+            </motion.a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* BMI Calculator Section */}
+      <section className="py-24 bg-gradient-to-br from-stone-50 to-sage-50/20">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 ">
           <BMICalculator />
         </div>
