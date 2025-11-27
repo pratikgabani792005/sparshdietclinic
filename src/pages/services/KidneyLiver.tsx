@@ -7,7 +7,7 @@ export function KidneyLiver() {
       title="Kidney & Liver Disorder Diets"
       subtitle="ORGAN HEALTH & FUNCTION SUPPORT"
       description="Specialized therapeutic nutrition for kidney and liver health. This medical nutrition therapy program is designed to reduce organ stress, manage symptoms, slow disease progression, and optimize function through carefully controlled nutrient intake."
-      heroImage="https://images.unsplash.com/photo-1754941622136-6664a3f50b2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwd2VsbG5lc3MlMjB0aGVyYXB5fGVufDF8fHx8MTc2MzMwOTIwM3ww&ixlib=rb-4.1.0&q=80&w=1080"
+      heroImage="/assets/kidney&liver.jpg"
       icon={Droplets}
       benefits={[
         'Controlled protein, sodium, and phosphorus intake',

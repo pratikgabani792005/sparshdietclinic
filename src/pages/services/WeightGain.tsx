@@ -7,7 +7,7 @@ export function WeightGain() {
       title="Weight Gain Program"
       subtitle="HEALTHY WEIGHT & MUSCLE BUILDING"
       description="Build lean muscle mass and achieve healthy weight gain through strategic nutrition planning. Whether you're an athlete, recovering from illness, or naturally lean, this program provides the caloric surplus and nutrient density needed for sustainable, healthy weight gain."
-      heroImage="https://images.unsplash.com/photo-1611779013424-1ec1aaf87be7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoZWFsdGh5JTIwbnV0cml0aW9uJTIwd2VsbG5lc3N8ZW58MXx8fHwxNzYzMzg1Mjc0fDA&ixlib=rb-4.1.0&q=80&w=1080"
+      heroImage="/assets/weightGain.jpg"
       icon={TrendingUp}
       benefits={[
         'Calculated caloric surplus for steady, healthy weight gain',

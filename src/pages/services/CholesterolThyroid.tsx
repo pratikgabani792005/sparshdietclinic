@@ -7,7 +7,7 @@ export function CholesterolThyroid() {
       title="Cholesterol & Thyroid Balance"
       subtitle="CARDIOVASCULAR & HORMONAL HEALTH"
       description="Optimize your cholesterol levels and thyroid function through targeted nutritional interventions. This specialized program addresses lipid profiles and thyroid health using food as medicine, supporting cardiovascular wellness and metabolic balance."
-      heroImage="https://images.unsplash.com/photo-1761582861462-ee72cf21336e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYWxhbmNlZCUyMG51dHJpdGlvbiUyMHBsYXRlfGVufDF8fHx8MTc2MzM4NTI3Nnww&ixlib=rb-4.1.0&q=80&w=1080"
+      heroImage="/assets/cholestrolThyroid.jpg"
       icon={Heart}
       benefits={[
         'Improved cholesterol ratios (HDL, LDL, triglycerides)',

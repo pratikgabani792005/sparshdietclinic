@@ -278,9 +278,9 @@ export function Home() {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-xl">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1691935152546-3a9e05f4010b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bHRyYXNvdW5kJTIwbWVkaWNhbCUyMGRldmljZXxlbnwxfHx8fDE3NjMzODUyNzZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                  src="/assets/AdvanceTechnologyUpdated.jpg"
                   alt="Ultrasound Cavitation Technology"
-                  className="w-full h-[350px] lg:h-[500px] object-cover"
+                  className="w-full h-[250px] lg:h-[350px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent" />
               </div>
