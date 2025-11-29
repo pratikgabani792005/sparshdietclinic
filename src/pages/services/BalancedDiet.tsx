@@ -7,7 +7,7 @@ export function BalancedDiet() {
       title="Balanced Diet Program"
       subtitle="HOLISTIC WELLNESS & PREVENTION"
       description="Achieve optimal health and vitality through a balanced, whole-foods approach to nutrition. This comprehensive program focuses on disease prevention, energy optimization, immune support, and overall wellness through evidence-based nutritional principles."
-      heroImage="https://images.unsplash.com/photo-1761582861462-ee72cf21336e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYWxhbmNlZCUyMG51dHJpdGlvbiUyMHBsYXRlfGVufDF8fHx8MTc2MzM4NTI3Nnww&ixlib=rb-4.1.0&q=80&w=1080"
+      heroImage="/assets/balanced-diet.jpg"
       icon={Apple}
       benefits={[
         'Optimized energy levels throughout the day',
